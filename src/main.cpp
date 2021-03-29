@@ -41,13 +41,14 @@ int main(int argc, char** argv) {
     const uint8_t dataPin = stoi(argv[1]);
     const uint8_t clockPin = stoi(argv[2]);
     const int32_t refUnit = stoi(argv[3]);
-    const int32_t refUnit = stoi(argv[4]);
+    const int32_t offset = stoi(argv[4]);
 
     wiringPiSetup();
 
     HX711::HX711 hx(dataPin, clockPin);
 
     hx.set_reference_unit(refUnit);
+    hx.setOffset(offset);
     // hx.tare();
 
     while(true) {
