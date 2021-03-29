@@ -53,7 +53,7 @@ int main(int argc, char** argv) {
 
     while(true) {
         cout << fixed << hx.get_weight(5) << endl;
-        this_thread::sleep_for(chrono::milliseconds(100));
+        this_thread::sleep_for(chrono::milliseconds(500));
     }
 
     return 0;
