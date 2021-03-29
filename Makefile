@@ -41,6 +41,10 @@ hx711calibration: $(BUILDDIR)/Calibration.o
 test: $(BUILDDIR)/test.o
 	$(CC) $(CFLAGS) $(INC) -o $(BINDIR)/test $(BUILDDIR)/test.o -L $(BUILDDIR)/ -lhx711 $(LIB)
 
+.PHONY: main
+main: $(BUILDDIR)/main.o
+	$(CC) $(CFLAGS) $(INC) -o $(BINDIR)/main $(BUILDDIR)/main.o -L $(BUILDDIR)/ -lhx711 $(LIB)
+
 .PHONY: clean
 clean:
 	$(RM) -r $(BUILDDIR)/*
