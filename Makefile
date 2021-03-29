@@ -19,7 +19,7 @@ ifeq ($(TRAVIS),true)
 endif
 
 .PHONY: all
-all: dirs $(BUILDDIR)/libhx711.a test hx711calibration
+all: dirs $(BUILDDIR)/libhx711.a test hx711calibration main
 
 .PHONY: dirs
 dirs:
